@@ -60,6 +60,12 @@ app.put('/campgrounds/:id', async (req, res) => {
     res.redirect(`/campgrounds/${campground._id}`);
 });
 
+app.delete('/campgrounds/:id', async (req, res) => {
+    const { id } = req.params;
+    await Campground.findByIdAndDelete(id);
+    res.redirect('/campgrounds');
+})
+
 let server_port = 3000 || process.env.YOUR_PORT || process.env.PORT;
 app.listen(server_port, () => {
     console.log(`Listening on port ${server_port}`);
