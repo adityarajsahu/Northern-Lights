@@ -7,7 +7,7 @@ const ejsMate = require('ejs-mate');
 
 const Campground = require('./models/campground');
 
-mongoose.connect('mongodb://localhost:27017/northern-lights', {
+mongoose.connect('mongodb://0.0.0.0:27017/northern-lights', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
