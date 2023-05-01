@@ -8,6 +8,7 @@ const ExpressError = require('./utils/ExpressError');
 
 const campgrounds = require('./routes/campgrounds');
 const reviews = require('./routes/reviews');
+const exp = require('constants');
 
 mongoose.connect('mongodb://0.0.0.0:27017/northern-lights', {
     useNewUrlParser: true,
@@ -28,6 +29,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/campgrounds', campgrounds);
