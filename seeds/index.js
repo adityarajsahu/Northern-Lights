@@ -25,7 +25,16 @@ const seedDB = async() => {
             author: '645ef6a6e1d8262fa7db81cd',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
-            image: 'https://source.unsplash.com/collection/483251',
+            images: [
+                {
+                    url: 'https://res.cloudinary.com/dodjz7fl6/image/upload/v1684216598/Northern-Lights/eqqwswrjz1jkkezxeeeq.jpg',
+                    filename: 'Northern-Lights/eqqwswrjz1jkkezxeeeq'
+                },
+                {
+                    url: 'https://res.cloudinary.com/dodjz7fl6/image/upload/v1684216097/Northern-Lights/bslkk0i04uzkq2t91gb9.jpg',
+                    filename: 'Northern-Lights/bslkk0i04uzkq2t91gb9'
+                }
+            ],
             description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit perferendis eligendi similique ullam neque suscipit sunt itaque quam sed minus, ducimus, minima fugiat! Quo repudiandae ea ipsam amet illo quisquam?',
             price: price
         })
