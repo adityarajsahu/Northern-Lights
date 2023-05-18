@@ -4,12 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Northern Lights</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/home.css">
 </head>
 
-<body>
-    <h1>Northern Lights</h1>
+<body class="d-flex text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-left mb-0">Northern Lights</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-right">
+                    <a href="#" class="nav-link active" aria-current="page">Home</a>
+                    <a href="/campgrounds" class="nav-link">Campgrounds</a>
+                    <% if(!currentUser) { %>
+                    <a href="/login" class="nav-link">Login</a>
+                    <a href="/register" class="nav-link">Register</a>
+                    <% } else { %>
+                    <a href="/logout" class="nav-link">Logout</a>
+                    <% } %>
+                </nav>
+            </div>
+        </header>
+        <main class="px-3">
+            <h1>Northern Lights</h1>
+            <p class="lead">Welcome to Northern Lights! <br> If you're an outdoor enthusiast or a nature lover in search of the perfect camping destination, you've arrived at the right place. Our website is your go-to resource for exploring a wide range of campgrounds, each offering its own unique charm and amenities. Whether you prefer tent camping, RV camping, or cabin rentals, we've got you covered. With our extensive listings, detailed descriptions, and helpful reviews, you can easily find the ideal campground to suit your preferences and create lasting memories with family and friends. Get ready to embark on unforgettable adventures in the great outdoors with our campground guide at your fingertips. Let the journey begin!
+            </p>
+            <a href="/campgrounds" class="btn btn-lg btn-outline-light font-weight-bold">View Campgrounds</a>
+        </main>
 
+        <footer class="mt-auto text-white-50">
+            <p>&copy; 2023 Northern Lights</p>
+        </footer>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
+
