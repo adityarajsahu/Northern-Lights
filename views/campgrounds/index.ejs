@@ -3,17 +3,17 @@
 <div id="cluster-map"></div>
 
 <h1>All Campgrounds</h1>
-<div>
+<!-- <div>
     <a href="/campgrounds/new">Add Campground</a>
-</div>
+</div> -->
 <% for (let campground of campgrounds){%>
     <div class="card mb-3">
         <div class="row">
             <div class="col-md-4">
                 <% if(campground.images.length) { %>
-                    <img class="img-fluid" alt="" src="<%=campground.images[0].url%>">
+                    <img crossorigin="anonymous" class="img-fluid" alt="" src="<%=campground.images[0].url%>">
                 <% } else { %>
-                    <img class="img-fluid" alt=""
+                    <img crossorigin="anonymous" class="img-fluid" alt=""
                         src="https://trip2kerala.com/wp-content/uploads/2023/02/Spice-Stays-Camping-Ground-Suryanelli-Tent-Stay-4.jpeg">
                 <% } %>
             </div>
